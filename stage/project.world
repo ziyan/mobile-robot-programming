@@ -1,0 +1,83 @@
+
+# Desc: Stage demo with lots of models. Works with everything.cfg.
+# CVS: $Id: everything.world,v 1.85 2006/03/29 05:11:00 rtv Exp $
+
+# the size of a pixel in Stage's underlying raytrace model in meters
+resolution     0.02
+
+interval_sim 100  # milliseconds per update step
+interval_real 100 # real-time milliseconds per update step
+
+# defines Pioneer-like robots
+include "rit-pioneer.inc"
+
+# defines 'map' object used for floorplans
+include "map.inc"
+
+size [131.2 41]
+
+gui_disable 0
+gui_interval 100
+gui_menu_interval 20
+
+window( 
+  size [ 960.000 300.000 ] 
+  scale 0.14 
+)
+
+map( 
+  bitmap "bitmaps/3large.png" 
+  map_resolution 0.082
+  size [131.2 41] 
+  name "golisano"
+)
+
+pioneer2dx
+(
+  name "p0"
+  color "red"
+  pose [-15.5 12 0]
+)
+pioneer2dx
+(
+  name "p1"
+  color "green"
+  pose [-16.5 12 180]
+)
+pioneer2dx
+(
+  name "p2"
+  color "cyan"
+  pose [-5 -10.5 0]
+)
+pioneer2dx
+(
+  name "p3"
+  color "magenta"
+  pose [7.5 1 90]
+)
+pioneer2dx
+(
+  name "p4"
+  color "yellow"
+  pose [-48 12 90]
+)
+pioneer2dx
+(
+  name "p5"
+  color "grey"
+  pose [-48 -10.5 270]
+)
+pioneer2dx
+(
+  name "p6"
+  color "blue"
+  pose [7.5 -5 90]
+)
+pioneer2dx
+(
+  name "p7"
+  color "white"
+  pose [0 -7 270]
+)
+
